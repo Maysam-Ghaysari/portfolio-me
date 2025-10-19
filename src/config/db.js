@@ -1,16 +1,28 @@
+// db.js
 const mongoose = require("mongoose");
 
-const connectToDB = async () => {
-  try {
-    if (mongoose.connections[0].readyState) {
-      return true;
-    } else {
-      await mongoose.connect(process.env.MONGO_URL);
-      console.log("connect to db succssesfuly");
-    }
-  } catch (err) {
-    console.log("db connection to eror", err);
-  }
+const uri = process.env.MONGO_URL; 
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: { version: "1", strict: true, deprecationErrors: true },
 };
 
-export default connectToDB;
+let cached = global.mongoose;
+
+if (!cached) cached = global.mongoose = { conn: null, promise: null };
+
+async function connectToDB() {
+  if (cached.conn) return cached.conn;
+
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(uri, options).then((mongoose) => {
+      return mongoose;
+    });
+  }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
+}
+
+module.exports = connectToDB;
