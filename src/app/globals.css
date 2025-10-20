@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  background-image: url("/back/back.jpg");
-  background-size: cover;
-
+background-color: #0b1120;
   /* @media (max-width: 640px) {
     background-size:cover;
   } */

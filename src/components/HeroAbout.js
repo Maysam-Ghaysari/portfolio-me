@@ -12,7 +12,9 @@ export default function HeroAbout() {
   };
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* <div className="fixed top-50 left-180 w-96 h-96 bg-gray-500 rounded-full blur-[130px]" /> */}
+        <div className=" fixed -top-12 -left-32 w-166 h-126 bg-gray-600 rounded-full blur-[160px] " />
+
 
       {/* Content Container */}
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -58,8 +60,8 @@ export default function HeroAbout() {
             </button>
 
             {/* Contact Me Button */}
-            <button
-              onClick={() => console.log("Contact Me")}
+            <a
+            href="#contact"
               className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-white/6 backdrop-blur-sm border-1 border-white/10 border-1 border-gray-500 text-gray-300 rounded-full hover:bg-white/20 transform hover:scale-105 transition-all duration-500 font-semibold text-lg"
             >
               <Mail
@@ -67,7 +69,7 @@ export default function HeroAbout() {
                 className="group-hover:rotate-12 transition-transform duration-300"
               />
               <span>Contact Me</span>
-            </button>
+            </a>
           </div>
 
           {/* Scroll Down Indicator */}

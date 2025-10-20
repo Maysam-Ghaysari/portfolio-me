@@ -1,11 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, Download, Globe, Sun, Moon } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const [language, setLanguage] = useState("EN");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -17,49 +15,41 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center space-x-2 group">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
-                <span className="text-white font-bold text-xl">P</span>
+                <span className="text-white font-bold text-xl">M</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hidden sm:block">
-                Portfolio
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent sm:block">
+                Maysam Ghaysari
               </span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
-            {/* Download Resume Button */}
-            <a
-              href="/Resume/MyResume.pdf"
-              download
-              className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300"
-            >
-              Download Resume
-            </a>
-
-            {/* Language Switcher */}
-            <button
-              onClick={() => setLanguage(language === "EN" ? "FA" : "EN")}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg transform hover:scale-105 transition-all duration-200 font-medium"
-            >
-              <Globe size={18} />
-              <span className="font-semibold">{language}</span>
-            </button>
-
-            {/* Dark/Light Mode Toggle */}
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className="p-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg transform hover:scale-105 transition-all duration-200"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+          <div className="flex gap-4">
+            <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+              <a
+                href="/Resume/MyResume.pdf"
+                download
+                className="inline-flex items-center  bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 rounded-full hover:bg-white/10 p-3  transition-all duration-300"
+              >
+                Download Resume
+              </a>
+            </div>
+            <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center  bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 rounded-full hover:bg-white/10 p-3  transition-all duration-300"
+              >
+                Contact
+              </a>
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={toggleMenu}
-              className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+              className="p-2 rounded-full bg-white/5 text-white  border border-white/10 transition-colors duration-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,53 +60,26 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-all duration-600 ease-in-out ${
+          isOpen ? "max-h-64 opacity-100 " : "max-h-0 opacity-0 "
         }`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-3 bg-white/95 backdrop-blur-md border-t border-gray-100">
+        <div className="px-4 pt-2 pb-4 space-y-3 backdrop-blur-md border-t border-gray-400">
           {/* Download Resume - Mobile */}
           <button
+          type="button"
             onClick={() => {
               console.log("Download Resume");
               setIsOpen(false);
             }}
-            className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md font-medium"
+            className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-white/9 rounded-full text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md font-medium"
           >
             <Download size={18} />
             <span>Download Resume</span>
           </button>
 
           <div className="flex space-x-3">
-            {/* Language Switcher - Mobile */}
-            <button
-              onClick={() => {
-                setLanguage(language === "EN" ? "FA" : "EN");
-              }}
-              className="flex-1 flex items-center justify-center space-x-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg transition-all duration-200 font-medium"
-            >
-              <Globe size={18} />
-              <span>Language: {language}</span>
-            </button>
-
-            {/* Dark/Light Mode - Mobile */}
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className="flex items-center justify-center space-x-2 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg transition-all duration-200 font-medium"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <>
-                  <Sun size={18} />
-                  <span>Light</span>
-                </>
-              ) : (
-                <>
-                  <Moon size={18} />
-                  <span>Dark</span>
-                </>
-              )}
-            </button>
+       
           </div>
         </div>
       </div>

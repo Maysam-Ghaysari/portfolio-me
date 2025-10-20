@@ -58,7 +58,7 @@ const AboutMe = () => {
           </div>
 
           {/* Text Content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left  bg-white/4 backdrop-blur-sm border-white/10 border-1 text-gray-300 rounded-3xl hover:bg-white/20 p-4 transition-all duration-300">
+          <div className="w-full lg:w-1/2 text-center lg:text-left  bg-white/4 backdrop-blur-sm border-white/10 border-1 text-gray-300 rounded-3xl hover:bg-white/10 p-4 transition-all duration-300">
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl mb-4">
               About Me
             </h2>

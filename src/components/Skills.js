@@ -35,7 +35,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 max-sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {displayedSkills.map((skill, index) => {
             const Icon = skill.icon;
             return (

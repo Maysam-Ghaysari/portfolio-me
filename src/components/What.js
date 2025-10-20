@@ -81,6 +81,7 @@ const WhatIDo = () => {
 
   return (
     <section className="relative py-12 font-sans overflow-hidden max-w-[1280px] m-auto">
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* هدر بخش */}
         <div className="text-center mb-16">

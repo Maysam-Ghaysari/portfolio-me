@@ -10,11 +10,9 @@ import WhatIDo from "@/components/What";
 export default function Home() {
   return (
     <>
-    
       <Navbar />
       <HeroAbout />
-
-      <WhatIDo  />
+      <WhatIDo />
       <ProjectsSection />
       <SkillsSection />
       <AboutMe />
