@@ -117,7 +117,7 @@ const ContactMe = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white/5 backdrop-blur-sm border-white/10 border-1 text-gray-300 rounded-3xl  p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+          <div className="grid grid-cols-1 lg:grid-cols-2  gap-12 bg-white/5 backdrop-blur-sm border-white/10 border-1 text-gray-300 rounded-3xl  p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
             {/* Contact Information */}
             <div className="flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -178,7 +178,7 @@ const ContactMe = () => {
                   onChange={(event) => setName(event.target.value)}
                   id="name"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-white/10  bg-white/55 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 />
               </div>
               <div>
@@ -195,7 +195,7 @@ const ContactMe = () => {
                   onChange={(event) => setEmail(event.target.value)}
                   id="email"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-white/10  bg-white/55 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 />
               </div>
               <div>
@@ -212,14 +212,14 @@ const ContactMe = () => {
                   onChange={(event) => setMessage(event.target.value)}
                   rows="5"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300  bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-white/10  bg-white/55 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 ></textarea>
               </div>
               <div>
                 <button
                   onClick={submitMessage}
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 font-semibold bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:ring-offset-gray-800 transition-all duration-300"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 font-semibold bg-indigo-600/60 rounded-full shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-300 border border-white/20"
                 >
                   Send Message
                 </button>
