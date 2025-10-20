@@ -4,5 +4,7 @@
   background-image: url("/back/back.jpg");
   background-size: cover;
 
+  /* @media (max-width: 640px) {
+    background-size:cover;
+  } */
 }
-

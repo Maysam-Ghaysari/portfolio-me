@@ -61,7 +61,7 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-white/6 backdrop-blur-sm rounded-3xl overflow-hidden border border-gray-500 transform hover:-translate-y-2 transition-all duration-300"
+              className="group relative bg-white/6 backdrop-blur-sm rounded-3xl overflow-hidden border-white/10 border-1 transform hover:-translate-y-2 transition-all duration-300"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
         <div className="text-center">
           <Link
             href="/allproject"
-            className="group inline-flex items-center space-x-3 px-8 py-4 bg-white/10 backdrop-blur-md border border-gray-700 text-gray-300 rounded-3xl hover:bg-white/20 transform hover:scale-105 transition-all duration-500"
+            className="group inline-flex items-center space-x-3 px-8 py-4 bg-white/10 backdrop-blur-md border-white/10 border-1 text-gray-300 rounded-3xl hover:bg-white/20 transform hover:scale-105 transition-all duration-500"
           >
             <span>View All Projects</span>
             <ArrowRight

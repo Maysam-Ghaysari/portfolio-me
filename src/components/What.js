@@ -80,8 +80,7 @@ const WhatIDo = () => {
   ];
 
   return (
-    <section className="relative py-2 font-sans overflow-hidden max-w-[1280px] m-auto">
-
+    <section className="relative py-12 font-sans overflow-hidden max-w-[1280px] m-auto">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* هدر بخش */}
         <div className="text-center mb-16">
@@ -97,24 +96,22 @@ const WhatIDo = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative group  bg-white/6 backdrop-blur-sm border-1 border-gray-500 text-gray-300 rounded-3xl hover:bg-white/20 p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+              className="relative group p-6 text-gray-200 transition-all duration-500
+                bg-white/5 backdrop-blur-lg
+                border border-white/10
+                rounded-[5%_90%_30%_30%] 
+                 
+                "
             >
-              {/* لایه داخلی شیشه‌ای */}
-              <div
-               
-              >
-                <div className="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-indigo-100/30 border border-white/30 shadow-inner">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-200 leading-relaxed">
-                  {service.description}
-                </p>
+              <div className="flex items-center justify-center h-16 w-16 mb-6 rounded-full bg-indigo-100/30 border border-white/30 shadow-inner">
+                {service.icon}
               </div>
-
-              {/* درخشش نور از بالا (اختیاری ولی قشنگ) */}
+              <h3 className="text-xl font-bold text-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-gray-200 leading-relaxed">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

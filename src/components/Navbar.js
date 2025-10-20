@@ -10,7 +10,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50  backdrop-blur-md border-b  shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50  backdrop-blur-md   shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
@@ -33,7 +33,7 @@ export default function Navbar() {
               download
               className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300"
             >
-            Download Resume
+              Download Resume
             </a>
 
             {/* Language Switcher */}

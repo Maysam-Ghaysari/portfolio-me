@@ -19,7 +19,7 @@ export default function HeroAbout() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Greeting with fade-in effect */}
           <div className="mb-16 animate-fadeIn">
-            <span className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-blue-200 text-sm font-medium tracking-wide">
+            <span className="inline-block px-4 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-blue-200 text-sm font-medium tracking-wide">
               Welcome to my portfolio
             </span>
           </div>
@@ -51,7 +51,7 @@ export default function HeroAbout() {
             {/* Download Resume Button */}
             <button
               onClick={downloadResume}
-              className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4  bg-white/6 backdrop-blur-sm border-1 border-gray-500 text-gray-300 rounded-3xl hover:bg-white/20  transform hover:scale-105 hover:shadow-2xl transition-all duration-500 font-semibold text-lg "
+              className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4  bg-white/6 backdrop-blur-sm border-1 border-white/10 text-gray-300 rounded-full hover:bg-white/20  transform hover:scale-105 hover:shadow-2xl transition-all duration-500 font-semibold text-lg "
             >
               <Download size={22} className="group-hover:animate-bounce" />
               <span>Download Resume</span>
@@ -60,7 +60,7 @@ export default function HeroAbout() {
             {/* Contact Me Button */}
             <button
               onClick={() => console.log("Contact Me")}
-              className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-white/6 backdrop-blur-sm border-1 border-gray-500 text-gray-300 rounded-3xl hover:bg-white/20 transform hover:scale-105 transition-all duration-500 font-semibold text-lg"
+              className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-white/6 backdrop-blur-sm border-1 border-white/10 border-1 border-gray-500 text-gray-300 rounded-full hover:bg-white/20 transform hover:scale-105 transition-all duration-500 font-semibold text-lg"
             >
               <Mail
                 size={22}

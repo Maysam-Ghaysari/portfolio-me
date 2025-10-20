@@ -60,7 +60,7 @@ const GithubIcon = () => (
   </svg>
 );
 
-const ContactMe =  () => {
+const ContactMe = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -110,14 +110,14 @@ const ContactMe =  () => {
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             Get In Touch
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg leading-6 text-gray-400 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white/3 backdrop-blur-sm border-1 border-gray-500 text-gray-300 rounded-3xl  p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white/5 backdrop-blur-sm border-white/10 border-1 text-gray-300 rounded-3xl  p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
             {/* Contact Information */}
             <div className="flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -134,11 +134,11 @@ const ContactMe =  () => {
                 >
                   <MailIcon />
                   <span className="text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                    hello@example.com
+                    maysamghaysari96@gmail.com
                   </span>
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/maysam-ghaysari-227676367"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -149,7 +149,7 @@ const ContactMe =  () => {
                   </span>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/Maysam-Ghaysari"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -178,7 +178,7 @@ const ContactMe =  () => {
                   onChange={(event) => setName(event.target.value)}
                   id="name"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 />
               </div>
               <div>
@@ -195,7 +195,7 @@ const ContactMe =  () => {
                   onChange={(event) => setEmail(event.target.value)}
                   id="email"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 />
               </div>
               <div>
@@ -212,14 +212,14 @@ const ContactMe =  () => {
                   onChange={(event) => setMessage(event.target.value)}
                   rows="5"
                   required
-                  className="block w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                  className="block w-full px-4 py-3 rounded-lg border border-gray-300  bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                 ></textarea>
               </div>
               <div>
                 <button
                   onClick={submitMessage}
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:ring-offset-gray-800 transition-all duration-300"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 font-semibold bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:ring-offset-gray-800 transition-all duration-300"
                 >
                   Send Message
                 </button>

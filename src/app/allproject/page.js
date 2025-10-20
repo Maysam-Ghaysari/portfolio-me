@@ -60,15 +60,13 @@ export default function ProjectsGallery() {
   return (
     <section className="min-h-screen w-full flex flex-col items-center px-6 py-16 text-gray-100">
       {/* دکمه بازگشت */}
-      <div className="w-full max-w-6xl mb-10">
-        <Link
-          href="/"
-          className="flex items-center text-gray-400 hover:text-white transition"
-        >
-          <ArrowLeft className="mr-2" size={20} />
-          بازگشت
-        </Link>
-      </div>
+      <Link href="/">
+        <div className="w-full max-w-6xl mb-10 px-4 py-2">
+          <a className="block bg-white/5 backdrop-blur-md text-white font-semibold  rounded-full border border-white/10 text-center hover:bg-white/30 transition-all duration-300 px-5 py-4">
+            بازگشت به صفحه اصلی
+          </a>
+        </div>
+      </Link>
 
       {/* فیلتر */}
       <motion.div
