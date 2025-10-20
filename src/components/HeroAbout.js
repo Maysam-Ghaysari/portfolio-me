@@ -13,7 +13,7 @@ export default function HeroAbout() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* <div className="fixed top-50 left-180 w-96 h-96 bg-gray-500 rounded-full blur-[130px]" /> */}
-        <div className=" fixed -top-12 -left-32 w-166 h-126 bg-gray-600 rounded-full blur-[160px] " />
+        <div className=" absolute -top-12 -left-32 w-166 h-126 bg-blue-900 rounded-full blur-[120px] " />
 
 
       {/* Content Container */}
