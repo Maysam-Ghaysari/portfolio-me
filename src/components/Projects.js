@@ -6,14 +6,13 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "ZarinPal Website",
       description:
-        "A full-featured e-commerce platform built with Next.js, featuring product management, shopping cart, and secure checkout.",
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2032&auto=format&fit=crop",
-      tags: ["Next.js", "Tailwind", "Stripe"],
+        "A simple e-commerce website inspired by Zarinpal, built using only HTML and CSS. It was one of my first projects and is part of my portfolio to showcase early work and growth in web development",
+      image: "/projects/zarinpal.png",
+      tags: ["HTML", "CSS.module", " Responsive Design"],
       github: "#",
-      demo: "#",
+      demo: "https://gleeful-ganache-ec0db5.netlify.app",
     },
     {
       id: 2,
@@ -42,7 +41,6 @@ export default function ProjectsSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1280px] m-auto ">
       <div>
-
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
