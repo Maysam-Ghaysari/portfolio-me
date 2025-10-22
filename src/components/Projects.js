@@ -77,15 +77,14 @@ export default function ProjectsSection() {
                     href={project.github}
                     className="p-3 bg-white/90 rounded-full hover:bg-white transform hover:scale-110 transition-all duration-200 shadow-lg"
                     aria-label="View GitHub"
-                    onClick={(e) => e.preventDefault()}
                   >
                     <Github className="text-gray-900" size={20} />
                   </a>
                   <a
+                    target="_blank"
                     href={project.demo}
                     className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transform hover:scale-110 transition-all duration-200 shadow-lg"
                     aria-label="View Demo"
-                    onClick={(e) => e.preventDefault()}
                   >
                     <ExternalLink className="text-white" size={20} />
                   </a>
