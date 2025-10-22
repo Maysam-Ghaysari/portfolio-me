@@ -6,14 +6,33 @@ export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
 
   const skills = [
+    { name: "Next.js", color: "from-gray-600 to-gray-800", icon: Boxes },
+    { name: "React", color: "from-cyan-500 to-blue-500", icon: Code },
+    {
+      name: "JavaScript",
+      color: "from-yellow-500 to-orange-500",
+      icon: Sparkles,
+    },
     { name: "HTML", color: "from-orange-500 to-red-500", icon: Code },
     { name: "CSS", color: "from-blue-500 to-cyan-500", icon: Palette },
-    { name: "JavaScript", color: "from-yellow-500 to-orange-500", icon: Sparkles },
-    { name: "React", color: "from-cyan-500 to-blue-500", icon: Code },
-    { name: "Next.js", color: "from-gray-600 to-gray-800", icon: Boxes },
+
     { name: "Tailwind CSS", color: "from-teal-500 to-cyan-500", icon: Palette },
-    { name: "TypeScript", color: "from-blue-600 to-blue-800", icon: Code },
-    { name: "Git & GitHub", color: "from-purple-500 to-pink-500", icon: Sparkles },
+    { name: "Restfull APIs", color: "from-blue-600 to-blue-800", icon: Code },
+    { name: "Axios", color: "from-blue-600 to-blue-800", icon: Code },
+    { name: "Graph QL", color: "from-blue-600 to-blue-800", icon: Code },
+    { name: "Flexbox , grid", color: "from-blue-600 to-blue-800", icon: Code },
+
+    {
+      name: "Responsive Design",
+      color: "from-blue-600 to-blue-800",
+      icon: Code,
+    },
+
+    {
+      name: "Git & GitHub",
+      color: "from-purple-500 to-pink-500",
+      icon: Sparkles,
+    },
   ];
 
   const displayedSkills = showAll ? skills : skills.slice(0, 4);
@@ -49,7 +68,9 @@ export default function SkillsSection() {
                   >
                     <Icon className="text-white" size={28} />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {skill.name}
+                  </h3>
                 </div>
               </div>
             );

@@ -67,7 +67,7 @@ const WhatIDo = () => {
     },
     {
       icon: <BriefcaseIcon />,
-      title: "3 Years of Experience",
+      title: "1 Years of Experience",
       description:
         "Three years of solid experience in frontend development and UI design using modern frameworks.",
     },

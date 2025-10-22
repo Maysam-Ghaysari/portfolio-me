@@ -13,8 +13,7 @@ export default function HeroAbout() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* <div className="fixed top-50 left-180 w-96 h-96 bg-gray-500 rounded-full blur-[130px]" /> */}
-        <div className=" absolute -top-12 -left-32 w-166 h-126 bg-blue-900 rounded-full blur-[120px] " />
-
+      <div className="max-sm:hidden absolute -top-12 -left-32 w-166 h-126 bg-blue-900 rounded-full blur-[120px] " />
 
       {/* Content Container */}
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -61,7 +60,7 @@ export default function HeroAbout() {
 
             {/* Contact Me Button */}
             <a
-            href="#contact"
+              href="#contact"
               className="group w-full sm:w-auto flex items-center justify-center space-x-2 px-8 py-4 bg-white/6 backdrop-blur-sm border-1 border-white/10 border-1 border-gray-500 text-gray-300 rounded-full hover:bg-white/20 transform hover:scale-105 transition-all duration-500 font-semibold text-lg"
             >
               <Mail
