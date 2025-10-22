@@ -66,21 +66,15 @@ export default function Navbar() {
       >
         <div className="px-4 pt-2 pb-4 space-y-3 backdrop-blur-md border-t border-gray-400">
           {/* Download Resume - Mobile */}
-          <button
-          type="button"
-            onClick={() => {
-              console.log("Download Resume");
-              setIsOpen(false);
-            }}
-            className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-white/9 rounded-full text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-md font-medium"
+          <a
+            href="/Resume/MyResume.pdf"
+            download
+            className=" items-center flex justify-center bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 rounded-full hover:bg-white/10 p-3  transition-all duration-300"
           >
-            <Download size={18} />
-            <span>Download Resume</span>
-          </button>
+            Download Resume
+          </a>
 
-          <div className="flex space-x-3">
-       
-          </div>
+          <div className="flex space-x-3"></div>
         </div>
       </div>
     </nav>

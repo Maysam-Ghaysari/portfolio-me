@@ -1,37 +1,66 @@
 "use client";
 import { useState } from "react";
 import { Code, Palette, Boxes, Sparkles } from "lucide-react";
+import {
+  RiNextjsFill,
+  RiGithubFill,
+  RiReactjsFill,
+  RiHtml5Fill,
+  RiTailwindCssFill,
+  RiServerLine,
+} from "react-icons/ri";
+import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io";
+import { GrGraphQl } from "react-icons/gr";
+import { CiGrid42 } from "react-icons/ci";
+import { DiResponsive } from "react-icons/di";
+import { IoServerOutline } from "react-icons/io5";
 
 export default function SkillsSection() {
   const [showAll, setShowAll] = useState(false);
 
   const skills = [
-    { name: "Next.js", color: "from-gray-600 to-gray-800", icon: Boxes },
-    { name: "React", color: "from-cyan-500 to-blue-500", icon: Code },
+    { name: "Next.js", color: "from-gray-600 to-gray-800", icon: RiNextjsFill },
+    { name: "React", color: "from-cyan-500 to-blue-500", icon: RiReactjsFill },
     {
       name: "JavaScript",
       color: "from-yellow-500 to-orange-500",
-      icon: Sparkles,
+      icon: IoLogoJavascript,
     },
-    { name: "HTML", color: "from-orange-500 to-red-500", icon: Code },
-    { name: "CSS", color: "from-blue-500 to-cyan-500", icon: Palette },
+    { name: "HTML", color: "from-orange-500 to-red-500", icon: RiHtml5Fill },
+    { name: "CSS", color: "from-blue-500 to-cyan-500", icon: IoLogoCss3 },
 
-    { name: "Tailwind CSS", color: "from-teal-500 to-cyan-500", icon: Palette },
-    { name: "Restfull APIs", color: "from-blue-600 to-blue-800", icon: Code },
-    { name: "Axios", color: "from-blue-600 to-blue-800", icon: Code },
-    { name: "Graph QL", color: "from-blue-600 to-blue-800", icon: Code },
-    { name: "Flexbox , grid", color: "from-blue-600 to-blue-800", icon: Code },
+    {
+      name: "Tailwind CSS",
+      color: "from-teal-500 to-cyan-500",
+      icon: RiTailwindCssFill,
+    },
+    {
+      name: "Restfull APIs",
+      color: "from-blue-600 to-blue-800",
+      icon: RiServerLine,
+    },
+    {
+      name: "Axios",
+      color: "from-blue-600 to-blue-800",
+      icon: IoServerOutline,
+    },
+    { name: "Graph QL", color: "from-blue-600 to-blue-800", icon: GrGraphQl },
+    {
+      name: "Flexbox , grid",
+      color: "from-blue-600 to-blue-800",
+      icon: CiGrid42,
+    },
 
     {
       name: "Responsive Design",
       color: "from-blue-600 to-blue-800",
-      icon: Code,
+      icon: DiResponsive,
     },
 
     {
       name: "Git & GitHub",
       color: "from-purple-500 to-pink-500",
-      icon: Sparkles,
+      icon: RiGithubFill,
     },
   ];
 
