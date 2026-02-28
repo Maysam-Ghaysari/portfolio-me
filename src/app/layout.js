@@ -1,6 +1,5 @@
 import { Caveat, Raleway } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 
 const raleway = Raleway({
   variable: "raleway",
@@ -13,21 +12,28 @@ const caveat = Caveat({
 });
 
 export const metadata = {
-  title:
-    "میثم قیصری | توسعه‌دهنده فرانت‌اند | Next.js & React | maysam ghaysari",
+  title: "میثم قیصری | Frontend Developer | Maysam Ghaysari",
   description:
-    "میثم قیصری - برنامه‌نویس وب با تمرکز روی Next.js، React، Tailwind ، TypeScript   . مشاهده پروژه‌ها، رزومه و راه‌های ارتباط.",
+    "میثم قیصری، توسعه‌دهنده فرانت‌اند متخصص در Next.js و React. مشاهده پروژه‌ها و رزومه.",
+  metadataBase: new URL("https://maysamghaysari.ir"),
   openGraph: {
     title: "میثم قیصری - پورتفولیو - maysam ghaysari",
-    description: "...",
+    description:
+      "پورتفولیو و پروژه‌های میثم قیصری، توسعه‌دهنده فرانت‌اند متخصص در Next.js و React.",
     url: "https://maysamghaysari.ir",
     siteName: "میثم قیصری | maysam ghaysari",
-    images: [<Image src="/Me/maysam-ghaysari.webp" alt="My Image" fill />],
+    images: [
+      {
+        url: "https://maysamghaysari.ir/maysam-ghaysari.webp",
+        width: 1200,
+        height: 630,
+        alt: "میثم قیصری - Frontend Developer",
+      },
+    ],
     locale: "fa_IR",
     type: "website",
   },
 };
-
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
