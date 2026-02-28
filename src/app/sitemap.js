@@ -29,7 +29,10 @@ export default async function sitemap() {
       lastModified: today,
       changeFrequency: "weekly",
       priority: 1.0,
-      images: [`${baseUrl}/maysam-ghaysari.webp`],
+      images: [
+        `${baseUrl}/maysam-ghaysari.webp`,
+        `${baseUrl}/Me/maysam-ghaysari.webp`,
+      ],
     },
 
     // صفحات پروژه‌ها
