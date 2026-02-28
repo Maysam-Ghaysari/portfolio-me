@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import {
   Github,
   Download,
@@ -65,12 +64,12 @@ export default function HeroAbout() {
   return (
     <section className="relative h-screen w-full">
       {/* Background Image */}
-      <div className="fixed right-0 bottom-0 w-1/3 h-full hidden lg:block opacity-30 z-0 pointer-events-none">
+      <div className="fixed right-0 -bottom-5 w-230 h-full hidden lg:block opacity-30 z-0 pointer-events-none">
         <Image
-          src="/Me/maysamghaysari.webp" // مسیر تصویر در پوشه public
+          src="/Me/MaysamGhaysari.webp"
           alt="My Image"
-          fill // جایگزین h-full w-full برای پر کردن والد
-          priority // اگر این تصویر در دید اول کاربر (Above the fold) است
+          fill
+          priority
           className="object-cover object-left"
           style={{
             boxShadow: "-18px 0 130px rgba(220,220,220,0.9)",
