@@ -29,15 +29,7 @@ export default async function sitemap() {
       lastModified: today,
       changeFrequency: "weekly",
       priority: 1.0,
-      images: [
-        {
-          loc: `${baseUrl}/maysam-ghaysari.webp`,
-          caption:
-            "میثم قیصری| maysam ghaysari  - توسعه‌دهنده فرانت‌اند Next.js و React",
-          title: "میثم قیصری | maysam ghaysari",
-        },
-        // اگر عکس مهم دیگری در صفحه اصلی هست اضافه کنید
-      ],
+      images: [`${baseUrl}/maysam-ghaysari.webp`],
     },
 
     // صفحات پروژه‌ها
