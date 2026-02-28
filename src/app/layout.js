@@ -28,7 +28,6 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: "میثم قیصری - Frontend Developer",
-        س,
       },
     ],
     locale: "fa_IR",
