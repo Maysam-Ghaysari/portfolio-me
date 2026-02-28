@@ -66,7 +66,7 @@ export default function HeroAbout() {
       {/* Background Image */}
       <div className="fixed right-0 -bottom-5 w-230 h-full hidden lg:block opacity-30 z-0 pointer-events-none">
         <Image
-          src="/Me/میثم قیصری.webp"
+          src="/Me/maysam-ghaysari1.webp"
           alt="My Image"
           fill
           priority
