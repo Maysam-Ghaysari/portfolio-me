@@ -1,16 +1,19 @@
-// app/sitemap.js
-
 async function getProjects() {
-  // اینجا کد اتصال به MongoDB و گرفتن پروژه‌ها
-  // مثلاً:
-  // const projects = await db.collection('projects').find({}).toArray();
-  // return projects;
+  try {
+    const client = await MongoClient.connect(process.env.MONGODB_URI);
+    const db = client.db("maysam-portfolio");
+    const projects = await db
+      .collection("projects")
+      .find({})
+      .project({ slug: 1, updatedAt: 1 })
+      .toArray();
 
-  // فعلاً داده نمونه:
-  return [
-    { slug: "project-1", updatedAt: new Date("2025-11-20") },
-    { slug: "project-2", updatedAt: new Date("2025-12-05") },
-  ];
+    await client.close();
+    return projects;
+  } catch (error) {
+    console.error("Error fetching projects for sitemap:", error);
+    return []; // اگر خطا داد، آرایه خالی برگردان → sitemap خراب نشود
+  }
 }
 
 export default async function sitemap() {
@@ -19,24 +22,32 @@ export default async function sitemap() {
 
   const projects = await getProjects();
 
-  const staticPages = [
+  return [
+    // صفحه اصلی + عکس
     {
       url: baseUrl,
       lastModified: today,
       changeFrequency: "weekly",
       priority: 1.0,
+      images: [
+        {
+          loc: `${baseUrl}/میثم قیصری.webp`,
+          caption:
+            "میثم قیصری| maysam ghaysari  - توسعه‌دهنده فرانت‌اند Next.js و React",
+          title: "میثم قیصری | maysam ghaysari",
+        },
+        // اگر عکس مهم دیگری در صفحه اصلی هست اضافه کنید
+      ],
     },
-    // ... بقیه صفحات ثابت
+
+    // صفحات پروژه‌ها
+    ...projects.map((project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: project.updatedAt.toISOString().split("T")[0],
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
   ];
-
-  const dynamicPages = projects.map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: project.updatedAt.toISOString().split("T")[0],
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...dynamicPages];
 }
 
-export const revalidate = 86400; // هر روز بروزرسانی
+export const revalidate = 86400;
