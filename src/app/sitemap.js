@@ -31,7 +31,7 @@ export default async function sitemap() {
       priority: 1.0,
       images: [
         {
-          loc: `${baseUrl}/maysam-ghaysari1.webp`,
+          loc: `${baseUrl}/maysam-ghaysari.webp`,
           caption:
             "میثم قیصری| maysam ghaysari  - توسعه‌دهنده فرانت‌اند Next.js و React",
           title: "میثم قیصری | maysam ghaysari",
